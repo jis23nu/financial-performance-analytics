@@ -2,7 +2,7 @@
 
 
 
-An end-to-end analytics project exploring financial performance, revenue trends, product profitability, customer segments, and discount impact using \*\*Python, PySpark, Snowflake, dbt, SQL, and Power BI\*\*.
+An end-to-end data analytics and engineering portfolio project analyzing revenue, profitability, customer segments, products, and discount patterns using \*\*Python, Pandas, PySpark, Snowflake, dbt, SQL, and Power BI\*\*.
 
 
 
@@ -10,7 +10,11 @@ An end-to-end analytics project exploring financial performance, revenue trends,
 
 
 
-This project transforms financial sample data into validated analytical models and an interactive Power BI report. It demonstrates data cleaning, distributed data processing, cloud data warehousing, analytics engineering, SQL testing, and business intelligence.
+This project demonstrates how raw financial data can be transformed into validated analytical datasets, warehouse models, and business intelligence dashboards.
+
+
+
+The workflow covers data cleaning, exploratory analysis, distributed processing, cloud data warehousing, analytics engineering, data testing, and financial reporting.
 
 
 
@@ -18,85 +22,95 @@ This project transforms financial sample data into validated analytical models a
 
 
 
-\- \*\*Python \& Pandas\*\* — Data cleaning, exploratory analysis, and business insights
+| Technology | Purpose |
 
-\- \*\*PySpark\*\* — Data processing and validation
+|---|---|
 
-\- \*\*Snowflake\*\* — Cloud data warehouse and analytical storage
+| Python | Data preparation and exploratory analysis |
 
-\- \*\*dbt\*\* — Staging and mart models, source definitions, and data tests
+| Pandas | Data cleaning, summaries, and analysis |
 
-\- \*\*SQL\*\* — Transformations and financial aggregations
+| PySpark | Distributed data processing and validation |
 
-\- \*\*Power BI\*\* — Interactive dashboard and KPI reporting
+| Snowflake | Cloud data warehouse |
 
-\- \*\*Git \& GitHub\*\* — Version control and project documentation
+| SQL | Financial aggregations and transformations |
 
+| dbt | Staging models, analytical marts, and data tests |
 
+| Power BI | Interactive dashboards and KPI reporting |
 
-\## Architecture
-
-
-
-1\. \*\*Source:\*\* Microsoft Financial Sample dataset
-
-2\. \*\*Clean:\*\* Standardized column names and handled missing discount-band values
-
-3\. \*\*Process:\*\* Used Pandas and PySpark to validate and analyze the dataset
-
-4\. \*\*Warehouse:\*\* Loaded 700 records into Snowflake
-
-5\. \*\*Transform:\*\* Built staging and analytical models with dbt
-
-6\. \*\*Test:\*\* Validated required fields and profit-margin ranges
-
-7\. \*\*Visualize:\*\* Built a Power BI report for financial and profitability analysis
+| Git \& GitHub | Version control and project portfolio |
 
 
 
-\## Key Findings
+\## Project Architecture
 
 
 
-\- \*\*Total sales:\*\* approximately $118.73 million
+1\. \*\*Source data:\*\* Microsoft Financial Sample dataset.
 
-\- \*\*Total profit:\*\* approximately $16.89 million
+2\. \*\*Data cleaning:\*\* Standardized column names and handled missing discount-band values.
 
-\- \*\*Overall profit margin:\*\* approximately 14.23%
+3\. \*\*Analysis:\*\* Used Pandas to explore sales, profit, margin, products, segments, countries, and monthly trends.
 
-\- \*\*Government segment:\*\* approximately $11.39 million in profit, with a margin of about 21.69%
+4\. \*\*Processing:\*\* Used PySpark to validate and process the cleaned dataset.
 
-\- \*\*Enterprise segment:\*\* approximately $614,500 in losses, with a margin of about -3.13%
+5\. \*\*Data warehouse:\*\* Loaded 700 records into Snowflake.
 
-\- \*\*Product insight:\*\* Paseo generated the highest total sales and absolute profit among the products analyzed.
+6\. \*\*Transformation:\*\* Created staging and analytical models using dbt.
 
+7\. \*\*Testing:\*\* Added not-null checks and a custom profit-margin range test.
 
-
-These findings are based on the supplied sample dataset and are intended for analytical demonstration, not financial forecasting.
-
-
-
-\## dbt Models and Testing
+8\. \*\*Visualization:\*\* Built a Power BI report to communicate financial performance and profitability insights.
 
 
 
-The dbt project includes:
-
-\- A staging model for the Snowflake source table
-
-\- Product-and-segment profitability analysis
-
-\- Segment profitability aggregation
-
-\- Monthly financial aggregation
-
-\- Not-null tests on important profitability fields
-
-\- A custom test that checks profit margins against a defined range
+\## Key Business Findings
 
 
 
-The dbt build completed successfully with \*\*6 models, 6 data tests, and 1 source\*\* in the recorded run.
+The following results are based on the supplied sample dataset.
+
+
+
+| Metric | Result |
+
+|---|---:|
+
+| Total Sales | Approximately $118.73 million |
+
+| Total Profit | Approximately $16.89 million |
+
+| Overall Profit Margin | Approximately 14.23% |
+
+| Government Segment Profit | Approximately $11.39 million |
+
+| Government Segment Margin | Approximately 21.69% |
+
+| Enterprise Segment Loss | Approximately $614,500 |
+
+| Enterprise Segment Margin | Approximately -3.13% |
+
+
+
+\### Additional Insights
+
+
+
+\- \*\*Product performance:\*\* Paseo generated the highest total sales and absolute profit among the products analyzed.
+
+\- \*\*Segment performance:\*\* Government was the strongest major customer segment by total profit and margin.
+
+\- \*\*Enterprise profitability:\*\* The Enterprise segment was loss-making overall. Its results varied across discount bands, which merits further investigation rather than proving discounts alone caused the losses.
+
+\- \*\*Monthly performance:\*\* The monthly model supports analysis of sales and profit trends across the available 2013–2014 reporting periods.
+
+\- \*\*Data interpretation:\*\* Comparisons across years should account for the fact that 2013 contains fewer months than 2014.
+
+
+
+These findings describe the sample dataset and should not be interpreted as forecasts or recommendations for a real business without further validation.
 
 
 
@@ -104,15 +118,71 @@ The dbt build completed successfully with \*\*6 models, 6 data tests, and 1 sour
 
 
 
-The report includes:
-
-\- \*\*Financial Performance Overview:\*\* sales, profit, overall margin, and monthly trends
-
-\- \*\*Product \& Segment Analysis:\*\* profitability by product and customer segment, including segment-margin comparisons
+The Power BI report includes two report pages.
 
 
 
-The Power BI report is available in `reports/Financial\_Performance\_Analytics.pbix`.
+\### 1. Financial Performance Overview
+
+
+
+Includes headline KPIs for total sales, total profit, and overall profit margin, along with monthly sales and profit trends and profitability comparisons by segment and product.
+
+
+
+!\[Financial Performance Overview](reports/screenshots/financial-performance-overview.png)
+
+
+
+\### 2. Product \& Segment Analysis
+
+
+
+Includes a product-by-segment profitability matrix with conditional formatting and a customer-segment profit-margin comparison, including the negative Enterprise margin.
+
+
+
+!\[Product and Segment Analysis](reports/screenshots/product-segment-analysis.png)
+
+
+
+\*\*Open the report:\*\* \[`Financial\_Performance\_Analytics.pbix`](reports/Financial\_Performance\_Analytics.pbix)
+
+
+
+Download the PBIX file and open it in Power BI Desktop to explore the report interactively.
+
+
+
+\## dbt Models and Data Quality
+
+
+
+The dbt project is located in `financial\_performance\_dbt/`.
+
+
+
+It includes:
+
+
+
+\- `stg\_financial\_data.sql` — staging model for the raw Snowflake data.
+
+\- `fct\_profitability.sql` — profitability aggregation by product and segment.
+
+\- `mart\_segment\_profitability.sql` — customer-segment profitability summary.
+
+\- `mart\_monthly\_financials.sql` — monthly financial summary.
+
+\- `sources.yml` — definition of the source data.
+
+\- `fct\_profitability.yml` — not-null tests for important profitability fields.
+
+\- `profit\_margin\_range.sql` — custom test to flag profit margins outside the defined range.
+
+
+
+The recorded successful dbt build completed \*\*6 models, 6 data tests, and 1 source\*\* with no warnings or errors.
 
 
 
@@ -124,13 +194,47 @@ The Power BI report is available in `reports/Financial\_Performance\_Analytics.p
 
 financial-performance-analytics/
 
-├── data/                       # Cleaned data and analytical outputs
+├── data/
 
-├── financial\_performance\_dbt/  # dbt project, models, and tests
+│   ├── financial\_sample\_cleaned.csv
 
-├── notebooks/                  # Python financial analysis
+│   ├── financial\_spark\_output.csv
 
-├── reports/                    # Power BI report and charts
+│   ├── country\_profitability\_summary.csv
+
+│   ├── monthly\_financial\_summary.csv
+
+│   ├── product\_profitability\_summary.csv
+
+│   └── segment\_profitability\_summary.csv
+
+├── financial\_performance\_dbt/
+
+│   ├── models/
+
+│   │   ├── staging/
+
+│   │   ├── marts/
+
+│   │   └── sources/
+
+│   └── tests/
+
+├── notebooks/
+
+│   └── 01\_financial\_analysis.ipynb
+
+├── reports/
+
+│   ├── screenshots/
+
+│   │   ├── financial-performance-overview.png
+
+│   │   └── product-segment-analysis.png
+
+│   ├── Financial\_Performance\_Analytics.pbix
+
+│   └── analysis charts
 
 ├── .gitignore
 
@@ -140,21 +244,23 @@ financial-performance-analytics/
 
 
 
-\## How to Explore
+\## How to Explore the Project
 
 
 
-1\. Review `notebooks/01\_financial\_analysis.ipynb` for data cleaning and exploratory analysis.
+1\. Review `notebooks/01\_financial\_analysis.ipynb` for cleaning, exploration, and analysis.
 
-2\. Explore the dbt models under `financial\_performance\_dbt/models/`.
+2\. Explore the cleaned dataset and derived summaries in `data/`.
 
-3\. Review the custom SQL test under `financial\_performance\_dbt/tests/`.
+3\. Review the dbt staging and mart models under `financial\_performance\_dbt/models/`.
 
-4\. Open `reports/Financial\_Performance\_Analytics.pbix` in Power BI Desktop.
+4\. Inspect the custom SQL test under `financial\_performance\_dbt/tests/`.
+
+5\. View the Power BI screenshots above or open the PBIX file in Power BI Desktop.
 
 
 
-Running the dbt models requires a configured Snowflake connection and appropriate access to the source table. Keep credentials in local configuration and never commit passwords or tokens.
+Rebuilding the warehouse models requires a configured Snowflake connection, the appropriate permissions, and access to the source table. Keep credentials in local configuration and never commit passwords, tokens, or private connection details.
 
 
 
@@ -162,7 +268,7 @@ Running the dbt models requires a configured Snowflake connection and appropriat
 
 
 
-The repository contains cleaned and derived sample data for reproducibility. The original Excel source file is excluded. Please check the original dataset's applicable terms before redistributing it.
+The original Excel source file is excluded from this repository. The repository contains cleaned and derived sample data for analysis. Check the applicable source-data terms before redistributing the original dataset.
 
 
 
@@ -174,7 +280,5 @@ The repository contains cleaned and derived sample data for reproducibility. The
 
 
 
-Portfolio project demonstrating financial analytics, data engineering, analytics engineering, and business intelligence.
-
-
+Portfolio project demonstrating data analytics, data engineering, analytics engineering, SQL transformation, data quality testing, and business intelligence.
 
