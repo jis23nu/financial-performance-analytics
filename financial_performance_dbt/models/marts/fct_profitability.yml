@@ -1,0 +1,34 @@
+
+version: 2
+
+models:
+  - name: fct_profitability
+    description: "Profitability summary by product and customer segment."
+    columns:
+      - name: product
+        description: "Product name."
+        data_tests:
+          - not_null
+
+      - name: segment
+        description: "Customer segment."
+        data_tests:
+          - not_null
+
+      - name: total_sales
+        description: "Total sales for each product and segment."
+        data_tests:
+          - not_null
+
+      - name: total_profit
+        description: "Total profit for each product and segment."
+        data_tests:
+          - not_null
+
+      - name: profit_margin_pct
+        description: "Profit as a percentage of sales."
+        data_tests:
+          - not_null
+
+
+      

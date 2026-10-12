@@ -1,0 +1,9 @@
+
+version: 2
+
+sources:
+  - name: financial_raw
+    database: FINANCIAL_ANALYTICS
+    schema: FINANCE
+    tables:
+      - name: financial_data

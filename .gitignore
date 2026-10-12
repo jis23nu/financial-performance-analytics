@@ -1,0 +1,33 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+profiles.yml
+secrets.yml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and temporary files
+logs/
+*.log
+
+# Power BI temporary/backup files
+*.pbix~
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+data/financial_sample.xlsx

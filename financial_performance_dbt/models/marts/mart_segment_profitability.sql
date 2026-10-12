@@ -1,0 +1,15 @@
+
+{{ config(materialized='table') }}
+
+SELECT
+    SEGMENT,
+    SUM(TOTAL_SALES) AS TOTAL_SALES,
+    SUM(TOTAL_PROFIT) AS TOTAL_PROFIT,
+    SUM(TOTAL_COGS) AS TOTAL_COGS,
+    SUM(TOTAL_UNITS_SOLD) AS TOTAL_UNITS_SOLD,
+    ROUND(
+        SUM(TOTAL_PROFIT) / NULLIF(SUM(TOTAL_SALES), 0) * 100,
+        2
+    ) AS PROFIT_MARGIN_PCT
+FROM {{ ref('fct_profitability') }}
+GROUP BY SEGMENT
