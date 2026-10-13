@@ -1,0 +1,37 @@
+
+version: 2
+
+models:
+  - name: mart_segment_profitability
+    description: "Profitability summary by customer segment."
+    columns:
+      - name: SEGMENT
+        description: "Customer segment."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: TOTAL_SALES
+        description: "Total sales by segment."
+        data_tests:
+          - not_null
+
+      - name: TOTAL_PROFIT
+        description: "Total profit by segment."
+        data_tests:
+          - not_null
+
+      - name: TOTAL_COGS
+        description: "Total cost of goods sold by segment."
+        data_tests:
+          - not_null
+
+      - name: TOTAL_UNITS_SOLD
+        description: "Total units sold by segment."
+        data_tests:
+          - not_null
+
+      - name: PROFIT_MARGIN_PCT
+        description: "Profit as a percentage of sales."
+        data_tests:
+          - not_null

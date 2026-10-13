@@ -1,0 +1,46 @@
+
+version: 2
+
+models:
+  - name: mart_monthly_financials
+    description: "Monthly financial performance summary by year and month."
+    columns:
+      - name: YEAR
+        description: "Calendar year of the financial records."
+        data_tests:
+          - not_null
+
+      - name: MONTH_NUMBER
+        description: "Numeric month, from 1 to 12."
+        data_tests:
+          - not_null
+
+      - name: MONTH_NAME
+        description: "Name of the month."
+        data_tests:
+          - not_null
+
+      - name: MONTH_START_DATE
+        description: "Earliest date represented in the monthly group."
+        data_tests:
+          - not_null
+
+      - name: TOTAL_SALES
+        description: "Total sales for the month."
+        data_tests:
+          - not_null
+
+      - name: TOTAL_PROFIT
+        description: "Total profit for the month."
+        data_tests:
+          - not_null
+
+      - name: TOTAL_COGS
+        description: "Total cost of goods sold for the month."
+        data_tests:
+          - not_null
+
+      - name: PROFIT_MARGIN_PCT
+        description: "Profit as a percentage of sales."
+        data_tests:
+          - not_null
